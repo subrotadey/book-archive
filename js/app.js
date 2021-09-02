@@ -63,7 +63,7 @@ const loadData = books => {
             newDiv.classList.add('col');
             newDiv.innerHTML = `
             <div class="card h-100">
-                <img src='https://covers.openlibrary.org/b/id/${bookInformation.cover_i}-M.jpg' class="card-img-top" alt="...">
+                <img src='https://covers.openlibrary.org/b/id/${bookInformation.cover_i}-M.jpg' class="card-img-top" style="height: 600px; alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-info">${bookInformation.title}</h5>
                     <hr>
