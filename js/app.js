@@ -53,7 +53,7 @@ const loadData = books => {
         //total book calculation
         totalBook.innerHTML = '';
         const newDiv = document.createElement('div');
-        newDiv.innerHTML = `<h6 class="text-center text-black border border-success mb-3 p-3">You got ${newBookDetails.length} books</h6><hr>`
+        newDiv.innerHTML = `<h6 class="text-center text-black border border-success mb-3 p-3 bg-info text-white">You got ${newBookDetails.length} books</h6><hr>`
         searchResult.innerHTML = '';
         totalBook.appendChild(newDiv);
         
@@ -65,13 +65,14 @@ const loadData = books => {
             <div class="card h-100">
                 <img src='https://covers.openlibrary.org/b/id/${bookInformation.cover_i}-M.jpg' class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">${bookInformation.title}</h5>
-                    <p class="card-subtitle mb-2">Author Name: ${bookInformation.author_name}</p>
-                    <p class="card-text">Publisher: ${bookInformation.publisher}</p>
-                    <p class="card-text">First Publish Year: ${bookInformation.first_publish_year}</p>
+                    <h5 class="card-title text-info">${bookInformation.title}</h5>
+                    <hr>
+                    <p class="card-subtitle mb-2"><span class="fw-bolder">Author Name:</span> ${bookInformation.author_name}</p>
+                    <p class="card-text"><span class="fw-bolder">Publisher:</span> ${bookInformation.publisher}</p>
+                    <p class="card-text"><span class="fw-bolder">First Publish Year: </span>${bookInformation.first_publish_year}</p>
                 </div>
                 <div class="card-footer">
-                <small class="text-muted">Author Key: ${bookInformation.author_key}</small>
+                <small class="text-muted"><span class="fw-bolder">Author Key:</span> ${bookInformation.author_key}</small>
                 </div>
             </div>
             `
